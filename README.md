@@ -13,6 +13,7 @@ We provide implementations integrated into two state-of-the-art frameworks:
 1.  **OpenVINS-ORPE**: Based on the MSCKF filter-based framework.
 2.  **ORB-SLAM3-ORPE**: Based on the optimization-based SLAM framework.
 
+Note: The full source code is currently being organized and cleaned. It will be fully open-sourced here immediately upon the acceptance of the paper.
 ---
 
 ## 📖 Abstract
