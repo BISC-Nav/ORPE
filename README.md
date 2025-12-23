@@ -7,7 +7,7 @@
 [![Framework: ORB-SLAM3](https://img.shields.io/badge/Framework-ORB--SLAM3-orange)](https://github.com/UZH-RPG/ORB_SLAM3)
 ![Status](https://img.shields.io/badge/Status-Under%20Review-yellow)
 
-**Authors:** Bing Han, Tuan Li, Yuezu Lv, Weisong Wen, Zhipeng Wang, and Chuang Shi
+**Authors:** Bing Han, Tuan Li*, Yuezu Lv, Weisong Wen, Zhipeng Wang, and Chuang Shi
 
 This repository contains the official source code for the paper **"Orthogonal Ray Projection: A Tangent-Space Visual Measurement Model for Robust Visual-Inertial Odometry"**, submitted to **IEEE Robotics and Automation Letters (RA-L)**.
 
