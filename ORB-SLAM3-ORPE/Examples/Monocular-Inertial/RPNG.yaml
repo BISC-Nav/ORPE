@@ -1,0 +1,84 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+Camera.type: "KannalaBrandt8"
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera1.fx: 276.4850207717928
+Camera1.fy: 278.0310503180516
+Camera1.cx: 314.5836189313042
+Camera1.cy: 240.16980920673427
+
+Camera1.k1: -0.03149689493503132
+Camera1.k2: 0.07696336480701078
+Camera1.k3: -0.06608854732019281
+Camera1.k4: 0.019667561645120218
+
+# Camera resolution
+Camera.width: 640
+Camera.height: 480
+
+#Camera.newWidth: 600
+#Camera.newHeight: 350
+
+# Camera frames per second 
+Camera.fps: 20
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Transformation from camera to body-frame (imu)
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.99992127, -0.0078594, 0.0097819, -0.05845078,
+         0.00784873, 0.99996856, 0.00112822, -0.00728728,
+        -0.00979046, -0.00105136, 0.99995152, 0.0623674,
+         0.0, 0.0, 0.0, 1.0]
+
+# IMU noise
+IMU.NoiseGyro: 1.1186830841306218e-04 # 1.6968e-04
+IMU.NoiseAcc: 0.0027052931930236323 # 2.0e-3
+IMU.GyroWalk: 8.997530210630026e-07 
+IMU.AccWalk: 1.3054568211204843e-04 # 3e-03
+IMU.Frequency: 200.0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 3000 # 1000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 30
+ORBextractor.minThFAST: 23
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 3.0
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5 # -1.8
+Viewer.ViewpointF: 500.0
+
