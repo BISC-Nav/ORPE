@@ -20,7 +20,7 @@ We provide implementations integrated into two state-of-the-art frameworks:
 The reprojection error in Visual-Inertial Odometry (VIO) suffers from high nonlinearity due to perspective division, which degrades estimator consistency and robustness, particularly under large depth uncertainty. To address this, we propose a novel visual measurement model, the Orthogonal Ray Projection Error (ORPE), which is formulated in the tangent space of the observation ray. By minimizing the orthogonal distance between the estimated landmark and the measurement ray, ORPE eliminates the explicit dependency on scalar depth, rendering the residual function linear with respect to the feature position. We derive the exact analytical Jacobians and uncertainty propagation model, integrating ORPE into both the MSCKF-based OpenVINS and the optimization-based ORB-SLAM3 frameworks. Simulations confirm that ORPE renders the measurement model linear regarding feature position, while reducing nonlinearity with respect to camera pose. Extensive real-world experiments demonstrate that the proposed method significantly improves trajectory accuracy and estimator consistency in challenging weak-parallax scenarios, while maintaining computational efficiency comparable to standard approaches.
 
 <p align="center">
-  <img src="doc/system_overview.png" alt="System Overview" width="800"/>
+  <img src="overview.png" alt="System Overview" width="800"/>
   <br>
   <em>Fig. 1: System overview of the integrated frameworks. Top: OpenVINS (ORPE) with modified MSCKF update. Bottom: ORB-SLAM3 (ORPE) with Orthogonal Ray Factor.</em>
 </p>
