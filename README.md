@@ -7,13 +7,13 @@
 [![Framework: ORB-SLAM3](https://img.shields.io/badge/Framework-ORB--SLAM3-orange)](https://github.com/UZH-RPG/ORB_SLAM3)
 ![Status](https://img.shields.io/badge/Status-Under%20Review-yellow)
 
+**Authors:** Bing Han, Tuan Li, Yuezu Lv, Weisong Wen, Zhipeng Wang, and Chuang Shi
+
 This repository contains the official source code for the paper **"Orthogonal Ray Projection: A Tangent-Space Visual Measurement Model for Robust Visual-Inertial Odometry"**, submitted to **IEEE Robotics and Automation Letters (RA-L)**.
 
 We provide implementations integrated into two state-of-the-art frameworks:
 1.  **OpenVINS-ORPE**: Based on the MSCKF filter-based framework.
 2.  **ORB-SLAM3-ORPE**: Based on the optimization-based SLAM framework.
-
-Note: The full source code is currently being organized and cleaned. It will be fully open-sourced here immediately upon the acceptance of the paper.
 ---
 
 ## 📖 Abstract
@@ -26,19 +26,18 @@ The reprojection error in Visual-Inertial Odometry (VIO) suffers from high nonli
   <em>Fig. 1: System overview of the integrated frameworks. Top: OpenVINS (ORPE) with modified MSCKF update. Bottom: ORB-SLAM3 (ORPE) with Orthogonal Ray Factor.</em>
 </p>
 
-
 ## 📂 Repository Structure
 
-The code is organized into two main sub-directories corresponding to the modified frameworks:
+This repository is organized into two main sub-projects. Please navigate to the respective directories for specific installation and usage instructions.
 
-```bash
-.
-├── OpenVINS-ORPE/       # Modified OpenVINS implementation
-│   ├── ov_core/         # Contains the ORPE-based MSCKF Update logic
-│   ├── ov_msckf/        # ROS wrapper and launch files
-│   └── ...
-├── ORB-SLAM3-ORPE/      # Modified ORB-SLAM3 implementation
-│   ├── src/             # Core SLAM logic including Orthogonal Ray Factor
-│   ├── include/         # Header files for ORPE formulation
-│   └── ...
-└── README.md
+### 1. [OpenVINS-ORPE](./OpenVINS-ORPE)
+> Implementation within the MSCKF-based OpenVINS framework.
+* **Key Features:** Tangent-space residual update in the MSCKF module.
+* **Path:** `./OpenVINS-ORPE`
+* **Usage:** Please refer to the [OpenVINS-ORPE README](./OpenVINS-ORPE/README.md) for build instructions.
+
+### 2. [ORB-SLAM3-ORPE](./ORB-SLAM3-ORPE)
+> Implementation within the Optimization-based ORB-SLAM3 framework.
+* **Key Features:** Custom "Orthogonal Ray Factor" for Bundle Adjustment.
+* **Path:** `./ORB-SLAM3-ORPE`
+* **Usage:** Please refer to the [ORB-SLAM3-ORPE README](./ORB-SLAM3-ORPE/README.md) for build instructions.
