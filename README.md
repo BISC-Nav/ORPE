@@ -34,7 +34,7 @@ This repository is organized into two main sub-projects. Please navigate to the 
 > Implementation within the MSCKF-based OpenVINS framework.
 * **Key Features:** Tangent-space residual update in the MSCKF module.
 * **Path:** `./OpenVINS-ORPE`
-* **Usage:** Please refer to the [OpenVINS-ORPE README](./OpenVINS-ORPE/README.md) for build instructions.
+* **Usage:** Please refer to the [OpenVINS-ORPE README](./OpenVINS-ORPE/ReadMe.md) for build instructions.
 
 ### 2. [ORB-SLAM3-ORPE](./ORB-SLAM3-ORPE)
 > Implementation within the Optimization-based ORB-SLAM3 framework.
